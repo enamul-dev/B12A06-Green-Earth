@@ -29,7 +29,7 @@
    <section class="bg-[#CFF0DC] " >
     <div class="flex items-center gap-4 container mx-auto">
         <div>
-        <img src="assets/hero-leaf1.png" alt="left-img">
+        <img class="invisible md:visible" src="assets/hero-leaf1.png" alt="left-img">
      </div>
      <div class="text-center">
         <h1 class="text-4xl font-bold">Plant a Tree, Grow a Future</h1>
@@ -38,15 +38,40 @@
            <button class="bg-yellow-500 px-4 py-2 rounded-full text-green-700 mt-4">Get Involved</button>
      </div>
      <div>
-         <img src="assets/hero-leaf2.png" alt="right-img">
+         <img class="invisible md:visible" src="assets/hero-leaf2.png" alt="right-img">
      </div>
     </div>
    </section>
 
    <!-- categories section -->
 
-   <section>
+   <section class="bg-[#f0fdf4]">
+    <h1 class="text-center text-4xl py-10">Choose Your Trees</h1>
+    <div class="flex flex-col md:flex-row container justify-around">
+        <div class="sidebar">
+            <h1 class="font-bold my-4">Categories</h1>
+            <ul id="categoryTree"></ul>
+        </div>
+        <div class="treeContainer grid grid-cols-1 md:grid-cols-3 w-96 md:w-[850px] h-full gap-4 bg-white rounded-lg" id="treeContainer"></div>
+        <div class="bg-white w-96 md:w-64 my-6">
+            <h1 class="px-4 pt-2 font-bold">Your Cart</h1>
+        </div>    
+    </div>
+    
 
+
+        <!-- Modal -->
+        <div id="treeModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg w-96 relative">
+            <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-900">&times;</button>
+            <img id="modalImage" class="w-full h-48 object-cover rounded mb-2" />
+            <h2  class="text-xl font-bold mb-2" id="demo"></h2>
+            <p class="mb-2" id="modalDescription"></p>
+            <p id="modalCategory"></p>
+            <p id="modalPrice"></p>
+        </div>
+        </div>
+        
    </section>
 
 
@@ -55,7 +80,7 @@
 
 <section class=" bg-[#f0fdf4] ">
     <h1 class="text-center text-4xl py-10">About the Campaign</h1>
-    <div class="flex justify-center gap-16 items-center container mx-auto py-16">
+    <div class="flex flex-col md:flex-row justify-center gap-16 items-center container mx-auto py-16">
        
         <img src="assets/about.png" alt="about-img">
     
@@ -80,7 +105,7 @@
 <!-- our impact section -->
 
 <section class="bg-[#cff0dc] py-36">
-    <div class="flex justify-center justify-around container">
+    <div class="flex flex-col md:flex-row gap-4 justify-center justify-around container">
         <div class="bg-white w-96 h-40 rounded-lg flex flex-col justify-center items-center">
         <h1 class="font-bold text-2xl text-green-700">500K+</h1>
         <p>Trees Planted</p>
@@ -100,7 +125,7 @@
 <!-- form section -->
 
 <section class="bg-green-800 py-40">
-  <div class="container mx-auto flex flex-col md:flex-row justify-center items-center gap-8 bg-green-700 w-[40em] py-10 rounded-xl">
+  <div class="container flex  justify-center items-center gap-8 bg-green-700 w-[40em] py-10 rounded-xl">
     <form class="flex flex-col gap-4" action="">
       
       <fieldset>
